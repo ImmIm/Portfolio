@@ -1,59 +1,74 @@
 @import url(./style.css);
 
-body{
-    background-color: rgb(240, 236 ,231);
+body {
+  background-color: rgb(240, 236, 231);
 }
 
-header nav{
-    color: black;
+header nav {
+  color: black;
 }
 
-section{
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+  // justify-content: space-between;
+}
+
+.card {
+  width: 80%;
+  border: 2px solid gray;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 13rem 1fr 1fr 1fr;
+
+  .logo {
+    grid-row: 1;
+    grid-column: 1;
+    aspect-ratio: 1/1;
+    width: 100%;
+  }
+
+  #logobsu {
+    aspect-ratio: 2/1;
+  }
+  h2 {
+    grid-row: 1;
+    grid-column: 2;
+    text-align: center;
+  }
+  .info {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  a,
+  p {
+    grid-column: 1;
+    grid-row: span 2;
+  }
+  .icons-wrapper {
     display: flex;
-    flex-direction: column;
-    gap: 5rem;
     align-items: center;
-    // justify-content: space-between;
+    justify-content: space-evenly;
+    grid-row: span 2;
+    grid-column: span 2;
+  }
 }
 
-.card{
-    width: 80%;
-    border: 2px solid gray;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 13rem 1fr 1fr 1fr;
+@media screen and (min-width: 901px) {
+  .card {
+    width: 50%;
 
-    .logo{
-        grid-row: 1;
-        grid-column: 1;
-        aspect-ratio: 1/1;
-        width: 100%;
+    .logo {
+      aspect-ratio: 1/1;
+      width: 10rem;
     }
+  }
 
-    #logobsu{
-        aspect-ratio: 2/1;
-    }
-    h2{
-        grid-row: 1;
-        grid-column: 2;
-        text-align: center;
-    }
-    .info{
-        grid-row: span 2;
-        grid-column: span 2;
-    }
-
-    a,p{
-        grid-column: 1;
-        grid-row: span 2
-    }
-    .icons-wrapper{
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        grid-row: span 2;
-        grid-column: span 2;
-    }
-
+  #logobsu {
+    aspect-ratio: 1/2.5;
+  }
 }

@@ -1,57 +1,58 @@
 @import url(./style.css);
 
-body{
-    background-color: rgb(240, 236 ,231);
- 
+body {
+  background-color: rgb(240, 236, 231);
 }
 
-header nav{
-    color: black;
+header nav {
+  color: black;
 }
 
-h1{
+h1 {
+  text-align: center;
+  margin: 1rem;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.project {
+  display: grid;
+  border: 2px solid black;
+  row-gap: 1rem;
+  width: 80%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3rem 1fr 20rem;
+
+  h2 {
+    grid-row: 1;
+    grid-column: span 2;
     text-align: center;
-    margin: 1rem;
+  }
+  img {
+    aspect-ratio: auto;
+    grid-row: 2;
+    grid-column: span 2;
+    width: 100%;
+  }
+
+  a {
+    text-align: center;
+    img {
+      aspect-ratio: 1/1;
+      width: 3rem;
+    }
+  }
 }
 
-section{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.project{
-    display: grid;
-    border: 2px solid black;
-    row-gap: 1rem;
-    width: 80%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 3rem 1fr 20rem;
-
-    h2{
-        grid-row: 1;
-        grid-column: span 2;
-        text-align: center;
-    }
-    img{
-        aspect-ratio: auto;
-        grid-row: 2;
-        grid-column: span 2;
-        width: 100%;
-    }
-
-    a{
-        text-align: center;
-        img{
-            aspect-ratio: 1/1;
-            width: 3rem;
-            
-        }
-
-    } 
-
-
+@media screen and (min-width: 901px) {
+  .project {
+    width: 50%;
+  }
 }

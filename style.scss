@@ -6,8 +6,8 @@
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 html {
@@ -134,7 +134,7 @@ $color-white: white;
   }
 
   #portfolio {
-    height: 22rem;
+    height: 25rem;
     background: rgb(71, 43, 21);
     background: linear-gradient(
       169deg,
@@ -145,39 +145,35 @@ $color-white: white;
       rgba(210, 150, 99, 1) 85%
     );
 
-    h2{
-        padding-top: 2rem;
-        text-align: center;
-        color: $color-text;
+    h2 {
+      padding-top: 2rem;
+      text-align: center;
+      color: $color-text;
     }
 
+    .portfoliowrapper {
+      padding-top: 50px;
+      display: flex;
+      margin: 0 10%;
+      justify-content: space-between;
 
-    .portfoliowrapper{
-        padding-top: 50px;
-        display: flex;
-        margin: 0 10%;
-        justify-content: space-between;
-
-
-
-        .portfolioproject{
-            width: 10rem;
-            background-color: transparent;
-            color: $color-text;
-            figcaption{
-                padding-top: 1rem;
-                text-align: center;
-
-            }
-            img{
-                aspect-ratio: 2/1;
-                width: 100%;
-                &:hover{
-                    transform: scale(1.1);
-                    transition-duration: 1s;
-                }
-            }
+      .portfolioproject {
+        width: 10rem;
+        background-color: transparent;
+        color: $color-text;
+        figcaption {
+          padding-top: 1rem;
+          text-align: center;
         }
+        img {
+          aspect-ratio: 2/1;
+          width: 100%;
+          &:hover {
+            transform: scale(1.1);
+            transition-duration: 1s;
+          }
+        }
+      }
     }
   }
 
@@ -204,7 +200,7 @@ $color-white: white;
 // big screens
 @media screen and (min-width: 901px) {
   #about-me {
-    height: 35rem;
+    height: 70vh;
     background-image: url(./assets/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -217,7 +213,7 @@ $color-white: white;
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
-      width: 70%;
+      height: 70%;
       aspect-ratio: 1.5/1;
       margin: 5rem;
       background-color: rgba(143, 143, 143, 0.5);
@@ -243,5 +239,138 @@ $color-white: white;
         }
       }
     }
+  }
+
+  header {
+    // position: absolute;
+    width: 100vw;
+    height: 4rem;
+    background-color: transparent;
+
+    nav {
+      height: 70%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: $color-text;
+    }
+  }
+
+  #hero {
+    height: 100vh;
+    background: rgb(39, 39, 59);
+    background: radial-gradient(
+      circle,
+      rgba(39, 39, 59, 1) 0%,
+      rgba(97, 107, 110, 1) 34%,
+      rgb(0, 0, 0) 55%
+    );
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      color: $color-text;
+    }
+
+    p {
+      color: $color-text;
+    }
+
+    img:first-of-type {
+      margin: 5rem;
+      border: 2px solid whitesmoke;
+      border-radius: 7.5rem;
+      width: 15rem;
+      aspect-ratio: 1/1;
+    }
+
+    img:last-of-type {
+      width: 3rem;
+    }
+
+    h2,
+    p {
+      color: $color-text;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    h2 a {
+      border-bottom: 2px solid transparent;
+      transition-property: border-color;
+      transition-duration: 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        border-color: $color-text;
+      }
+    }
+  }
+
+  #portfolio {
+    height: 45rem;
+    background: rgb(71, 43, 21);
+    background: linear-gradient(
+      169deg,
+      rgba(71, 43, 21, 1) 21%,
+      rgba(156, 93, 41, 1) 48%,
+      rgba(148, 97, 55, 1) 52%,
+      rgba(214, 128, 59, 1) 60%,
+      rgba(210, 150, 99, 1) 85%
+    );
+
+    h2 {
+      padding-top: 2rem;
+      text-align: center;
+      color: $color-text;
+    }
+
+    .portfoliowrapper {
+      padding-top: 50px;
+      display: flex;
+      gap: 5rem;
+      margin: 0 10%;
+      justify-content: space-between;
+
+      .portfolioproject {
+        width: 40rem;
+        background-color: transparent;
+        color: $color-text;
+        figcaption {
+          padding-top: 1rem;
+          text-align: center;
+        }
+        img {
+          aspect-ratio: 2/1;
+          width: 100%;
+          &:hover {
+            transform: scale(1.1);
+            transition-duration: 1s;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    height: 150px;
+    margin: 0 10%;
+    background-color: $color-background;
+    color: $color-white;
+  }
+
+  .bi {
+    color: $color-white;
+    font-size: 48px;
+    padding: 0 20px;
+  }
+
+  .socialmedia {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
   }
 }
